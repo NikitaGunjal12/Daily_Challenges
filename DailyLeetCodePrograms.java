@@ -25,9 +25,8 @@ class Solution {
         return min;
     }
 }
-*/ 
-/*
- Question_Number-4)Merge Nodes In Between zeros
+ *************************************************************************
+Question_Number-4)Merge Nodes In Between zeros
  Example 1:
 Input: head = [0,3,1,0,4,5,2,0]
 Output: [4,11]
@@ -37,7 +36,6 @@ The above figure represents the given linked list. The modified list contains
 - The sum of the nodes marked in red: 4 + 5 + 2 = 11.
 
 Solutions:
-/*
 Definition for singly-linked list.
  public class ListNode {
       int val;
@@ -72,6 +70,59 @@ class Solution {
         return head;
      }
 }
- */
+
+**************************************************************************
+Question_Number:5)Find the Minimum and Maximum number of Node bet Critical Path
+Input: head = [3,1]
+Output: [-1,-1]
+Explanation: There are no critical points in [3,1].
+
+Solution:
+
+ Definition for singly-linked list.
+  public class ListNode {
+      int val;
+      ListNode next;
+      ListNode() {}
+      ListNode(int val) { this.val = val; }
+      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+  }
+ 
+class Solution {
+    public int[] nodesBetweenCriticalPoints(ListNode head) {
+        int firstCPI= -1;
+        int prevCPI= -1;
+        int currentIndex = 1;
+        ListNode cur = head.next;
+        ListNode prev = head;
+        int res[] = new int[2];
+        res[0] = Integer.MAX_VALUE;
+        while(cur.next!=null){
+            ListNode nextNode = cur.next;
+            if((cur.val< nextNode.val && cur.val <prev.val) ||
+            (cur.val> nextNode.val && cur.val > prev.val)){
+                if(prevCPI ==-1){
+                    firstCPI = currentIndex;
+                    prevCPI = currentIndex;
+                }else{
+                    res[0]= Math.min(res[0],currentIndex-prevCPI);
+                    prevCPI = currentIndex;
+                }
+            }
+            prev = prev.next;
+            cur = cur.next;
+            currentIndex++;
+        }
+        if(firstCPI!=-1 && res[0]!=Integer.MAX_VALUE){
+            res[1] = prevCPI - firstCPI;
+        }else{
+            res[0] = -1;
+            res[1] = -1;
+
+        }
+        return res;
+    }
+}
+*/
   
 }
