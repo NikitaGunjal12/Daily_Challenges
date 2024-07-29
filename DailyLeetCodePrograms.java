@@ -123,6 +123,33 @@ class Solution {
         return res;
     }
 }
+Question_Number:5) Pass The Pillow
+ Input: n = 4, time = 5
+Output: 2
+Explanation: People pass the pillow in the following way: 1 -> 2 -> 3 -> 4 -> 3 -> 2.
+After five seconds, the 2nd person is holding the pillow.
+
+Solutions:
+class Solution {
+    public int passThePillow(int n, int time) {
+        int pillowPosition=1;
+        int currentTime=0;
+        boolean revDirection = false;
+        while(currentTime < time){
+            if(!revDirection){
+                pillowPosition++;
+            }else{
+                pillowPosition--;
+            }
+            if(pillowPosition==1 || pillowPosition==n){
+                revDirection=!revDirection;
+            }
+            currentTime++;
+        }
+        return pillowPosition;
+        
+    }
+}
 */
   
 }
