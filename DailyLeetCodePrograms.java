@@ -221,7 +221,15 @@ class Solution {
     }
 }
 *************************************************************************************
-Que_Number 9)  
+Que_Number 9)Average Waiting Time
+Input: customer =[[1,2],[2,5][4,3]]
+Output: 5.00000
+
+Explanation:
+
+
+
+
 */
   
 }
