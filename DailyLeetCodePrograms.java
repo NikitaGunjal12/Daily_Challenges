@@ -125,7 +125,8 @@ class Solution {
         return res;
     }
 }
-Question_Number:5) Pass The Pillow
+**********************************************************************************************
+Question_Number:6) Pass The Pillow
  Input: n = 4, time = 5
 Output: 2
 Explanation: People pass the pillow in the following way: 1 -> 2 -> 3 -> 4 -> 3 -> 2.
@@ -152,8 +153,9 @@ class Solution {
         
     }
 }
+ *************************************************************************************
 
-Question_Number:6) Water Bottles
+Question_Number:7) Water Bottles
 Input: Input: numBottles = 9, numExchange = 3
 Output: 13
 Explanation: You can exchange 3 empty bottles to get 1 full water bottle.
@@ -173,7 +175,8 @@ class Solution {
         
     }
 }
-Que-8) Find the Winner of Circular Game
+ ************************************************************************
+Que_Number 8) Find the Winner of Circular Game
 Input: n = 5, k = 2
 Output: 3
 Explanation: Here are the steps of the game:
@@ -217,6 +220,8 @@ class Solution {
         return list.get(0);
     }
 }
+*************************************************************************************
+Que_Number 9)  
 */
   
 }
